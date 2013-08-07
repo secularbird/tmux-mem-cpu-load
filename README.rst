@@ -23,19 +23,18 @@ The system load average is also displayed.
 
 Example output::
 
-  2885/7987MB [|||||     ]  51.2% 2.11 2.35 2.44
+  2885/7987MB 51.2% 2.11 2.35 2.44
 
-   ^    ^          ^         ^     ^    ^    ^
-   |    |          |         |     |    |    |
-   1    2          3         4     5    6    7
+   ^    ^      ^     ^    ^    ^
+   |    |      |     |    |    |
+   1    2      4     5    6    7
 
 1. Currently used memory.
 2. Available memory.
-3. CPU usage bar graph.
-4. CPU usage percentage.
-5. Load average for the past minute.
-6. Load average for the past 5 minutes.
-7. Load average for the past 15 minutes.
+3. CPU usage percentage.
+4. Load average for the past 1 minute.
+5. Load average for the past 5 minutes.
+6. Load average for the past 15 minutes.
 
 For `terminals with 256 color support`_, graded colors can be displayed by
 passing the **--colors** flag.
@@ -109,5 +108,6 @@ Contributions from:
 
 .. _tmux: http://tmux.sourceforge.net/
 .. _CMake: http://www.cmake.org
-.. _`project homepage`: http://github.com/thewtex/tmux-mem-cpu-load
+.. _`project homepage`: http://github.com/secularbird/tmux-mem-cpu-load
+.. _`origin project homepage`: http://github.com/thewtex/tmux-mem-cpu-load
 .. _`terminals with 256 color support`: http://misc.flogisoft.com/bash/tip_colors_and_formatting#terminals_compatibility

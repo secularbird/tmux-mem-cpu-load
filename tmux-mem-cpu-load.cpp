@@ -180,19 +180,11 @@ std::string cpu_string( unsigned int cpu_usage_delay,
   oss.setf( std::ios::fixed | std::ios::right );
 
   percentage = cpu_percentage( cpu_usage_delay );
-  float meter_step = 99.9 / graph_lines;
-  meter_count = 1;
-  while(meter_count*meter_step < percentage)
-    {
-    meter[meter_count] = '|';
-    meter_count++;
-    }
 
   if( use_colors )
     {
     oss << cpu_percentage_lut[static_cast<unsigned int>( percentage )];
     }
-  oss << meter;
   oss.width( 5 );
   oss << percentage;
   oss << "%";
