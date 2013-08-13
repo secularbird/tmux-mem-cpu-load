@@ -322,7 +322,7 @@ float cpu_percentage( unsigned int cpu_usage_delay )
                 oss << load_lut[load_percent];
             }
 
-        oss << load_line.substr( 0, 14 );
+        oss << load_line.substr( 0, 3 );
         if( use_colors )
             {
                 oss << "#[fg=default,bg=default]";
@@ -382,7 +382,7 @@ float cpu_percentage( unsigned int cpu_usage_delay )
                 return EXIT_FAILURE;
             }
 
-        std::cout << mem_string( use_colors ) << ' ' << cpu_string( cpu_usage_delay, graph_lines, use_colors ) << ' ' << load_string( use_colors );
+        std::cout << cpu_string( cpu_usage_delay, graph_lines, use_colors ) << ' ' << load_string( use_colors ) <<" "<< mem_string( use_colors ) ;
 
         return EXIT_SUCCESS;
     }
