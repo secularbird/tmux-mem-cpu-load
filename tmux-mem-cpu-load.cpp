@@ -322,7 +322,7 @@ float cpu_percentage( unsigned int cpu_usage_delay )
                 oss << load_lut[load_percent];
             }
 
-        oss << load_line.substr( 0, 3 );
+        oss << load_line.substr( 0, 4 );
         if( use_colors )
             {
                 oss << "#[fg=default,bg=default]";
